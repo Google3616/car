@@ -110,7 +110,7 @@
     car.angularVelocity *= angularDrag;
 
     if (car.isShooting && !car.isShot && !car.isHit) {
-      if (!car.lastShootAt || car.lastShootAt < Date.now() - 60) {
+      if (!car.lastShootAt || car.lastShootAt < Date.now() - 3600) {
         car.lastShootAt = Date.now();
         const { x, y, angle, xVelocity, yVelocity } = car;
         bullets.push({
